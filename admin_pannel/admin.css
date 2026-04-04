@@ -1,0 +1,264 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #1a0033, #000);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    width: 100%;
+    padding: 18px 40px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #c77dff, #f72585);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== PROFILE DROPDOWN ===== */
+.profile {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.profile-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.profile-btn i {
+    font-size: 12px;
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    min-width: 140px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.dropdown p {
+    padding: 12px;
+    font-size: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dropdown p:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+.dropdown .logout {
+    color: #ff4ecd;
+}
+
+/* SHOW DROPDOWN ON HOVER */
+.profile:hover .dropdown {
+    display: block;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    padding: 40px;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.top-bar input,
+.top-bar select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 250px;
+    background: rgba(255,255,255,0.05);
+    color: white;
+}
+
+.top-bar input::placeholder,
+.top-bar select {
+    color: gray;
+}
+
+.search-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== TABLE ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* TABLE STYLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+/* HEADER */
+thead {
+    background: rgba(255,255,255,0.08);
+}
+
+/* CELLS */
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* VERTICAL COLUMN SEPARATORS */
+th:not(:last-child),
+td:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+/* HEADER STYLE */
+th {
+    color: #c77dff;
+    font-weight: 500;
+}
+
+/* ROW HOVER */
+tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 25px;
+    }
+    table {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-bar input,
+    .top-bar select,
+    .search-btn {
+        width: 100%;
+    }
+}
+
+/* ===== MOBILE (max 600px) ===== */
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 12px 16px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    /* Top bar stacked */
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .top-bar input,
+    .top-bar select,
+    .search-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Table smaller text */
+    th, td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    /* Make table scroll smoother */
+    .table-container {
+        padding: 10px;
+    }
+}
+
+
+/* ===== TABLET (601px - 1024px) ===== */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .top-bar {
+        flex-wrap: wrap;
+    }
+
+    .top-bar input,
+    .top-bar select {
+        width: 48%;
+    }
+
+    .search-btn {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 13px;
+    }
+}

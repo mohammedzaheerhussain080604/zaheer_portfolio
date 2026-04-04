@@ -1,0 +1,274 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: radial-gradient(circle at bottom, #1a0033, #000);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+/* Navbar left logo */
+.nav-left h2 {
+    font-size: 28px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #c77dff, #f72585);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navbar center menu */
+.nav-center ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #b5b5c3;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+    color: #fff;
+}
+
+/* ===== NAV RIGHT ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Social Icons */
+.nav-right a.social {
+    width: 40px;
+    height: 40px;
+    background: none; /* transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-right a.social i {
+    color: #ccc;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.nav-right a.social:hover i {
+    color: #c77dff;
+    transform: scale(1.2);
+}
+
+.nav-right a.social:hover {
+    box-shadow: 0 0 8px rgba(199,125,255,0.3);
+}
+
+/* ===== RESUME BUTTON (Transparent Like Social Icons) ===== */
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: transparent; /* transparent background */
+    /* border: 1px solid rgba(199, 125, 255, 0.4); subtle border like social icons */
+     border-radius: 12px; /*rounded corners */
+    padding: 14px 26px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Icon size inside button */
+.resume-btn i {
+    font-size: 16px;
+}
+
+/* Hover effect: gradient background with shadow */
+.resume-btn:hover {
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    color: #fff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 18px rgba(199, 125, 255, 0.5);
+    border: none; /* remove border on hover */
+}
+/* ===== SKILLS SECTION ===== */
+.skills {
+    padding: 140px 20px 80px;
+}
+
+/* Tag */
+.tag {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Heading */
+.skills h1 {
+    font-size: 50px;
+    margin: 10px 0;
+    background: linear-gradient(90deg, #fff, #ff00cc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.skills h1::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 3px;
+    margin: 15px auto;
+    background: linear-gradient(90deg, transparent, #c77dff, transparent);
+}
+
+/* Description */
+.desc {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255,0,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255,0,255,0.6);
+}
+
+.card-title {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    margin-bottom: 20px;
+}
+
+/* Icons grid inside cards */
+.icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+/* Custom API icon */
+.custom {
+    width: 40px;
+    height: 40px;
+    background: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Bottom text */
+.bottom-text {
+    margin-top: 40px;
+    color: #aaa;
+}
+
+/* Highlight heading */
+.highlight {
+    margin-top: 10px;
+    color: #ff00cc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+    }
+
+    .nav-center {
+        gap: 15px;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .nav-right {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* ===== REMOVE LINK UNDERLINE ===== */
+.navbar a {
+    text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+}

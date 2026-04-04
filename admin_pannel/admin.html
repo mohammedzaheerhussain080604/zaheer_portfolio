@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <h2 class="logo">MZH Admin</h2>
+
+    <div class="profile">
+        <div class="profile-btn">
+            <span>Admin</span> <!-- default text -->
+            <i class="fas fa-chevron-down"></i>
+        </div>
+
+        <div class="dropdown">
+            <p> <a href="../html/index.html">User</a></p>
+            <p>Admin</p>
+            <p class="logout">Logout</p>
+        </div>
+    </div>
+</nav>
+
+<!-- ===== MAIN CONTAINER ===== -->
+<div class="container">
+
+    <!-- SEARCH + FILTER -->
+    <div class="top-bar">
+        <input type="text" placeholder="Search by name, email..." id="search_bar">
+
+        <select id="type">
+            <option  value="">All Types</option>
+            <option value="Student">Student</option>
+            <option value="Organization">Organization</option>
+            <option value="Project Related">Project Related</option>
+        </select>
+
+        <button class="search-btn" id="search-btn">Search</button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-container">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Subject</th>
+                    <th>Type</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- SAMPLE DATA -->
+                
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="./admin.js"></script>
+</body>
+</html>

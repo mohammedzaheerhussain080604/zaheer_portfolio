@@ -1,0 +1,256 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+    background: radial-gradient(circle at bottom, #1a0033, #000);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.nav-left h2 {
+    font-size: 28px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #c77dff, #f72585);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-center ul {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* match home */
+    flex-wrap: wrap;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #b5b5c3;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+    color: #fff;
+}
+
+/* ===== NAV RIGHT (FIXED LIKE HOME) ===== */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* ===== SOCIAL ICON BOX (MATCH HOME) ===== */
+.nav-right a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* ICON */
+.nav-right a i {
+    color: #ccc;
+    font-size: 18px;
+}
+
+/* HOVER */
+.nav-right a:hover {
+    box-shadow: 0 0 10px rgba(199,125,255,0.3);
+}
+
+.nav-right a:hover i {
+    color: #c77dff;
+}
+
+/* ===== RESUME BUTTON ===== */
+.resume-btn {
+    width: auto !important;
+    height: auto !important;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3) !important;
+    border-radius: 12px;
+    padding: 14px 26px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 8px;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(199,125,255,0.4);
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects {
+    padding: 140px 20px 80px;
+}
+
+/* Tag */
+.tag {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Heading */
+.projects h1 {
+    font-size: 50px;
+    margin: 10px 0 20px;
+    background: linear-gradient(90deg, #fff, #c77dff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Description */
+.desc {
+    color: #aaa;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Project Container */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+}
+
+/* Project Card */
+.project-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    border-radius: 18px;
+    padding: 25px;
+    text-align: left;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(199,125,255,0.12);
+    transition: all 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 18px rgba(199,125,255,0.25);
+}
+
+/* Image */
+.project-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Title */
+.project-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #fff, #c77dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Text */
+.project-card p {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    background: linear-gradient(90deg, #7b2ff7, #f107a3);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(199,125,255,0.4);
+}
+
+.btn.outline {
+    background: transparent;
+    border: 1px solid #c77dff;
+    color: #c77dff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+    }
+
+    .nav-center {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .nav-right {
+        justify-content: center;
+    }
+}
+
+/* ===== REMOVE LINK UNDERLINE ===== */
+.navbar a {
+    text-decoration: none !important;
+    background: none !important;
+    border: none !important;
+}
